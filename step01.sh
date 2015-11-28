@@ -1,6 +1,6 @@
 #!/bin/bash
 # fetch this file with:wget https://github.com/GitGoingBrains/generallee/step01.sh
-# wget -O - http://github.com/GitGoingBrains/generallee/step01.sh | bash
+# wget -O - http://github.com/GitGoingBrains/generallee/raw/master/step01.sh | bash
 #
 # developed for debian 8 on Digial Ocean snapshots access via non-root user on SSH
 # likely development projects on node, meteor, mongoDB and some python
