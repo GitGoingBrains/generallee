@@ -19,6 +19,8 @@ apt-get install -y vim
 apt-get install -y curl
 
 #clone .vimrc .tmuxrc
+touch .vimrc
+echo syntax on >> .vimrc 
 #dotfiles
 
 #using script call 1st agrument: get "generallee" install file, and run
