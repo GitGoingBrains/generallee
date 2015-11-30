@@ -25,8 +25,10 @@ echo syntax on >> .vimrc
 
 #using script call 1st agrument: get "generallee" install file, and run
 [ -z "$1" ] && echo "No project argument supplied"
+touch setup-args.log
 for var in "$@"
 do
+    echo "$var" >> setup-args.log
     wget https://github.com/GitGoingBrains/raw/master/"$var".sh
     bash "$var".sh
 done
