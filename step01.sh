@@ -25,6 +25,11 @@ echo syntax on >> .vimrc
 
 #using script call 1st agrument: get "generallee" install file, and run
 [ -z "$1" ] && echo "No project argument supplied"
+for var in "$@"
+do
+    wget https://github.com/GitGoingBrains/raw/master/"$var".sh
+    bash "$var".sh
+done
 #wget clone http://github.com/GitGoingBrains/$1-generallee-install.sh
 #bash $1-generallee-install.sh
 #clone working project (pointer from command line agrument?)
