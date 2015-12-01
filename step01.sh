@@ -24,21 +24,19 @@ echo syntax on >> .vimrc
 #dotfiles
 
 #using script call 1st agrument: get "generallee" install file, and run
-[ -z "$1" ] && echo "No project argument supplied"
 touch setup-args.log
+[ -z "$1" ] && echo "No project argument supplied" >> setup-args.log
 for var in "$@"
 do
     echo "$var" >> setup-args.log
     wget https://github.com/GitGoingBrains/raw/master/"$var".sh
     bash "$var".sh
+    rm "$var".sh
 done
-#wget clone http://github.com/GitGoingBrains/$1-generallee-install.sh
-#bash $1-generallee-install.sh
-#clone working project (pointer from command line agrument?)
+wget https://github.com/GitGoingBrains/generallee/step99.sh
+chmod 0700 step99.sh
+bash step99.sh
+rm step99.sh
+rm step01.sh
+exit
 
-#fetch private tokens/keys
-
-#create tmux sessions setup and autosave
-
-#rm setup script, etc.
-#reboot sys
