@@ -1,6 +1,9 @@
 #1/bin/bash
+L https://deb.nodesource.com/setup_5.x | sudo -E bash -
 sudo apt-get install -y nodejs
-echo "nodejs installer done" nodejs --version >> setup-args.log
-sudo apt-get install -y npm
-echo "npm installer done" npm --version >> setup-args.log
+
+#sudo apt-get install -y nodejs
+echo "nodejs done" nodejs --version >> setup-args.log
+#sudo apt-get install -y npm
+echo "npm done" npm --version >> setup-args.log
 exit
